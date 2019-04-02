@@ -110,3 +110,13 @@ let totalSmall = runners.reduce((accumulator, runner) => {
 }, 0);
 sizeSmall.push(totalSmall);
 console.log(sizeSmall);
+
+// Want to know who the biggest doner is
+let highestBid = runners.reduce((accumulator, runner) => {
+    if (runner.donation > accumulator) accumulator = runner.donation;
+    return accumulator;
+}, 0);
+
+let highestBidder = runners.filter(runner => runner.donation == highestBid);
+
+console.log(highestBidder);
