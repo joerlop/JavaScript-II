@@ -1,6 +1,26 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+const yourMajesty = function() {
+  let majesty = "Roger Federer";
+  console.log(`Your majesty is ${majesty}`);
+  debugger;
 
+  const grandSlams = function() {
+    console.log(`${majesty} has the all-time record of Grand Slam titles`);
+    debugger;
+
+    const masters = function() {
+      console.log(`${majesty} has the all-time record of Masters 1000 titles`);
+      debugger;
+    }
+    
+    masters();
+  }
+
+  grandSlams();
+}
+
+yourMajesty();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
