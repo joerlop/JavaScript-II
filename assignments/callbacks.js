@@ -80,3 +80,9 @@ function removeDuplicates(array, cb) {
 let test = ["banana", "banana", "pear", "strawberry", "pear", "pineapple"];
 
 removeDuplicates(test, result => console.log(result));
+
+//IIFE
+
+(function () {
+  console.log("Cool");
+})();
