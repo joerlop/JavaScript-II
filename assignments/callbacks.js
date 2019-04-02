@@ -69,4 +69,14 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  let freeOfDuplicates = [];
+  for (let element of array) {
+    if (!freeOfDuplicates.includes(element)) freeOfDuplicates.push(element);
+  }
+
+  return cb(freeOfDuplicates);
 }
+
+let test = ["banana", "banana", "pear", "strawberry", "pear", "pineapple"];
+
+removeDuplicates(test, result => console.log(result));
